@@ -1,18 +1,12 @@
-Iquidus Explorer - 1.6.1
+Iquidus Explorer- BTG edition - 1.6.1
 ================
 
 An open source block explorer written in node.js.
 
 ### See it in action
 
-*  [Jumbucks](http://explorer.getjumbucks.com)
-*  [Sphere](http://sphere.iquidus.io)
-*  [SAR](http://explorer.sarcoin.info)
-*  [Vanillacoin](https://blockchain.vanillacoin.net/)
-*  [Neoscoin](http://explorer.infernopool.com/)  
-*  [C2Chain](http://c2chain.info/)
+*  [Bitcoin Gold](http://btgblocks.com)
 
-*note: If you would like your instance mentioned here contact me*
 
 ### Requires
 
