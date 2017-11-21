@@ -7,7 +7,12 @@ html
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-109145240-2');    
-    script(src='https://authedmine.com/lib/simple-ui.min.js', async='')
+    script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+    script.
+      (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-6943091510572573",
+      enable_page_level_ads: true
+      });
     title= settings.title
     link(rel='stylesheet', href='/themes/#{settings.theme}/bootstrap.min.css')
     link(rel='stylesheet', href='/vendor/jqplot/jquery.jqplot.css')
@@ -198,7 +203,7 @@ html
             button.btn.btn-success(type='submit') #{settings.locale.ex_search_button}
     block content
     .navbar.navbar-default.navbar-fixed-bottom.hidden-xs
-      .col-md-3
+      .col-md-6
         if settings.display.twitter
           ul.nav.navbar-nav
             li.pull-left
@@ -220,17 +225,12 @@ html
                 span.glyphicon.fa.fa-google-plus
         ul.nav.navbar-nav
           li.pull-left
-            span.glyphicon.fa.fa-heart &nbsp; Donate BTG:GJnCPPSLNHd1xZhG9HzpuZHMf8P9kwtCv6 or donate hashpower with this javascript XMR miner! Thank you!
-      .col-md-6
-        ul.nav.navbar-nav
-          li.pull-left
-            .coinhive-miner(style='width: 728px; height: 90px', data-key='QpkszPvRSJ5NoGLOWyI4AdRSDd57kjR1')
-              em Loading...
-      .col-md-3
+            span.glyphicon.fa.fa-heart &nbsp; GJnCPPSLNHd1xZhG9HzpuZHMf8P9kwtCv6 
+      .col-md-4
         ul.nav
           li.text-center(style='margin-left:80px;margin-right:80px;')
             p(style='margin-top:15px;') 
-              a.navbar-link(href='https://github.com/iquidus/explorer', target='_blank') Powered by Iquidus Explorer 
+              a.navbar-link(href='https://github.com/vattay/iquidus-btg', target='_blank') Powered by Iquidus Explorer 
       span.connections
         label#lblBlockcount.label.label-default -
         label#lblConnections.label.label-default -

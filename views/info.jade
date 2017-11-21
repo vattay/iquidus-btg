@@ -38,7 +38,11 @@ block content
              *#{settings.locale.api_getrawtransaction}*  
              [#{address}/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=0](/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=0)  
              [#{address}/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=1](/api/getrawtransaction?txid=#{hashes.txhash}&decrypt=1)
-        
+          
+          *  **sendrawtransaction [hexstring]**
+             *#{settings.locale.api_sendrawtransaction}*  
+             [#{address}/api/sendrawtransaction?hexstring=](/api/getrawtransaction?hexstring=)  
+            
 
         if settings.index.show_hashrate == true
           :markdown
