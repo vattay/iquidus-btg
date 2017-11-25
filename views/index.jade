@@ -39,7 +39,7 @@ block content
         pageLength: 5,
         lengthChange: false,
         ajax: {
-          url: '/ext/getlastblocks?limit=100',
+          url: '/ext/getlastblocks?limit=60',
           dataSrc: function ( json ) {
             for ( var i=0;i<json.data.length; i++ ) {
               json.data[i]['timestamp'] = new Date((json.data[i]['timestamp']) * 1000).toUTCString();
@@ -62,7 +62,7 @@ block content
         responsive: true,
         lengthChange: true,
         processing: true,
-        pageLength: 3,
+        pageLength: 5,
         lengthChange: false,
         ajax: {
           url: '/ext/getlasttxs/0.00000001',
@@ -106,7 +106,7 @@ block content
   .col-md-12
     .panel.panel-default
       .panel-heading
-        .string Latest Blocks (Experimental, missing blocks in this list probably do exist in chain.) 
+        strong Latest Blocks  
       table#recent-blocks-table.table.table-bordered.table-striped
         thead
           tr

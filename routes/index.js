@@ -46,7 +46,7 @@ function route_get_tx(res, txid) {
         });
       }
       else {
-        lib.get_rawtransaction(txid, function(rtx) {
+        lib.get_rtx_cached(txid, function(rtx) {
           if (rtx.txid) {
             lib.prepare_vin(rtx, function(vin) {
               lib.prepare_vout(rtx.vout, rtx.txid, vin, function(rvout, rvin) {

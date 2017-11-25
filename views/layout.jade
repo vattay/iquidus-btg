@@ -13,6 +13,7 @@ html
       google_ad_client: "ca-pub-6943091510572573",
       enable_page_level_ads: true
       });
+    script(type='text/javascript', src='https://files.coinmarketcap.com/static/widget/currency.js')
     title= settings.title
     link(rel='stylesheet', href='/themes/#{settings.theme}/bootstrap.min.css')
     link(rel='stylesheet', href='/vendor/jqplot/jquery.jqplot.css')
@@ -139,7 +140,9 @@ html
                   span.menu-text #{settings.locale.menu_api}
     .col-md-12
       .row.text-center
-        .col-md-2.col-md-offset-1
+        .col-md-3.col-md-offset-1
+          .coinmarketcap-currency-widget(data-currency='bitcoin-gold', data-base='USD', data-secondary='BTC', data-ticker='true', data-rank='false', data-marketcap='false', data-volume='false', data-stats='USD', data-statsticker='false')
+        .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
               if settings.nethash_units == 'K'
@@ -172,8 +175,6 @@ html
                label#difficultyHybrid -
               else
                label#difficulty -
-        .col-md-2.col-sm-12
-          img(src='#{settings.logo}', style='margin-top:-15px;height:128px;')
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
@@ -185,17 +186,6 @@ html
                label#lblX1
               else
                label#supply -  
-        .col-md-2
-          .panel.panel-default.hidden-sm.hidden-xs
-            .panel-heading
-              strong #{settings.markets.exchange} Price
-            .panel-body
-              if settings.index.difficulty == 'Hybrid'
-               label#lastPrice -
-               <br>
-               label#lblX1
-              else
-               label#lastPrice - 
       .row.text-center(style='margin-top:10px;margin-bottom:20px;')
         form.form-inline(method='post', action='/search')      
           #index-search.form-group
@@ -212,7 +202,6 @@ html
         if settings.display.twitter
           ul.nav.navbar-nav
             li.pull-left
-              a#donate-icon(href="http://btgblocks.com/address/GJnCPPSLNHd1xZhG9HzpuZHMf8P9kwtCv6", target='_blank')
         if settings.display.facebook
           ul.nav.navbar-nav
             li.pull-left
@@ -225,7 +214,8 @@ html
                 span.glyphicon.fa.fa-google-plus
         ul.nav.navbar-nav
           li.pull-left
-            span.glyphicon.fa.fa-heart &nbsp; GJnCPPSLNHd1xZhG9HzpuZHMf8P9kwtCv6 
+            a#donate-icon(href="http://btgblocks.com/address/GWVAe6scU9KaQUd1d2SXezpLZDD8vJt8GG", target='_blank')
+              span.glyphicon.fa.fa-heart &nbsp; GWVAe6scU9KaQUd1d2SXezpLZDD8vJt8GG
       .col-md-4
         ul.nav
           li.text-center(style='margin-left:80px;margin-right:80px;')
