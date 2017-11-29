@@ -34,7 +34,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/iquidus/explorer explorer
+    git clone https://github.com/vattay/iquidus-btg explorer
 
 ### Install node modules
 
